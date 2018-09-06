@@ -27,7 +27,7 @@
 
 > 프로그램을 작성하기 전에 테스트를 먼저 해라!    
   Test the program before you write it    
-  Kent Beck
+  ㅡ Kent Beck
   
   * 프로그램을 작성하기 전에 먼저 테스트를 먼저 작성하는 것
     * 문서를 만들어 머리로 생각하고 눈으로 확인할 것인가?
@@ -38,7 +38,7 @@
 
 > 잘 동작하는 깔끔한 코드    
   Clean code that works    
-  Ron Jeffries
+  ㅡ Ron Jeffries
 
   * 잘 동작하는 것은 물론이고 *깔끔함*도 개발 목표에 포함된다.
     * 유지보수성
