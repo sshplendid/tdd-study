@@ -1,10 +1,19 @@
 package tdd.chap01.account;
 
+
+
+import org.hamcrest.CoreMatchers;
+import org.hamcrest.Matchers;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.notNullValue;
+import static org.hamcrest.Matchers.greaterThan;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
+import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
+
 
 /**
  *
@@ -28,6 +37,7 @@ public class AccountTest {
     @Test
     public void testAccount() {
         // TODO 은행계좌 클래스 만들기
+        assertThat(account, notNullValue());
     }
 
 
@@ -60,6 +70,12 @@ public class AccountTest {
         account.withdraw(1000);
 
         assertEquals(9000, account.getBalance());
+    }
+
+    @Test(expected = ShowMeTheMoneyException.class)
+    public void testWithdraw_잔고보다큰금액을_인출시도하면_예외가발생한다() {
+        account.withdraw(20000);
+        assertThat(account.getBalance(), greaterThan(0));
     }
 }
 

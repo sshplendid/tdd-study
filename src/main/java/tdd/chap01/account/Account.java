@@ -17,6 +17,8 @@ public class Account {
     }
 
     public void withdraw(int money) {
+        if((balance - money) < 0)
+            throw new ShowMeTheMoneyException();
         balance -= money;
     }
 }
